@@ -112,10 +112,10 @@ main h1, h2 {
 
 @keyframes textup {
   0% {
-    transform: translateY(120px);
+    transform: translateY(120px) scale(0.1);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }

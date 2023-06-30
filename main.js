@@ -13,6 +13,7 @@ const myPhrases = [
 
 btnCookie.addEventListener('click', handleTryClick)
 btnReset.addEventListener('click', handleResetClick)
+document.addEventListener('keydown', enterShortcut)
 
 function handleTryClick() {
   toggleClass()
@@ -24,6 +25,14 @@ function handleTryClick() {
 
 function handleResetClick() {
   toggleClass()
+}
+
+function enterShortcut(e) {
+  if(e.key == 'Enter' && screen2.classList.contains('hide')) {
+    handleTryClick()
+  } else if(e.key == 'Enter' && screen1.classList.contains('hide')) {
+    handleResetClick()
+  }
 }
 
 function toggleClass() {
